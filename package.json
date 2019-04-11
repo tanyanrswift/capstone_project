@@ -4,8 +4,16 @@
   "description": "An application for students to learn basic music theory",
   "main": "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[src/server.js)",
   "scripts": {
-    "test": "set export NODE_ENV=test&& jasmine"
+    "test": "set export NODE_ENV=test&& jasmine",
+    "start": "node src/server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.0.0",
+    "request": "^2.83.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
