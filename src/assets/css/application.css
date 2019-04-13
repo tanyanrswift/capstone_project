@@ -1,4 +1,36 @@
 body {
     padding-top: 54px;
   }
+
+.card-title {
+  padding-right: 54px;
+}
+
+/* 
+.main_header_landing {
+  text-align: center;
+  border: 3px solid black;
+}
+
+.details_header_landing {
+  text-align: center;
+}
+
+.visuals_landing {
   
+}
+
+.card_learn {
+  border: 3px solid black;
+  float: left;
+}
+
+.card_practice {
+  border: 3px solid black;
+  float: center;
+}
+
+.card_master{
+  border: 3px solid black;
+  float: right;
+} */
