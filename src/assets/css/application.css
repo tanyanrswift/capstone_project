@@ -1,36 +1,11 @@
 body {
     padding-top: 54px;
+    background-color: black;
   }
 
-.card-title {
-  padding-right: 54px;
+.container {
+  background-image: url("../../pattern.jpg");
+  background-position: center center;
+  background-size: 100% 100%
 }
 
-/* 
-.main_header_landing {
-  text-align: center;
-  border: 3px solid black;
-}
-
-.details_header_landing {
-  text-align: center;
-}
-
-.visuals_landing {
-  
-}
-
-.card_learn {
-  border: 3px solid black;
-  float: left;
-}
-
-.card_practice {
-  border: 3px solid black;
-  float: center;
-}
-
-.card_master{
-  border: 3px solid black;
-  float: right;
-} */
