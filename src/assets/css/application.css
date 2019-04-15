@@ -4,8 +4,10 @@ body {
   }
 
 .container {
-  background-image: url("../../pattern.jpg");
-  background-position: center center;
-  background-size: 100% 100%
+  background-image: url("/images/pattern.jpg");
+  background-size: 50%;
 }
 
+.jumbotron {
+  text-align: center;
+}
