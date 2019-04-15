@@ -1,0 +1,13 @@
+body {
+    padding-top: 54px;
+    background-color: black;
+  }
+
+.container {
+  background-image: url("/images/pattern.jpg");
+  background-size: 50%;
+}
+
+.jumbotron {
+  text-align: center;
+}
