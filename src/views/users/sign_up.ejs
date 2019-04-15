@@ -7,7 +7,13 @@
         <% include ../static/partials/navbar.ejs %>
         <main class="container" style="color:white;">
             <h2>Sign Up</h2>
-            <h3>Students</h3>
+            <fieldset>
+                <label>Please Select An Option To Sign Up:</label>
+                <select>
+                    <option value="1">Sign Up As A Student</option>
+                    <option value="2">Sign Up As A Teacher</option>
+                </select>
+            </fieldset>
             <form action="/users" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -28,35 +34,6 @@
                 <div class="form-group">
                     <label for="passwordConfirmation">Password Confirmation</label>
                     <input type="password" class="form-control" name="passwordConfirmation" placeholder="Please Reenter Your Password">
-                </div>
-
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </form>
-            <h3>Teachers</h3>
-            <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Please Enter Email">
-                    <small class="text-muted" id="emailHelp">email address must be a valid email</small>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" placeholder="Please Pick A Username">
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Please Enter A Password">
-                </div>
-
-                <div class="form-group">
-                    <label for="passwordConfirmation">Password Confirmation</label>
-                    <input type="password" class="form-control" name="passwordConfirmation" placeholder="Please Reenter Your Password">
-                </div>
-
-                <div class="form-group">
-                    <label for="access-code">Access Code</label>
-                    <input type="number" class="form-control" name="access-code" placeholder="Please Enter Your Access Code">
                 </div>
 
                 <button type="submit" class="btn btn-dark">Submit</button>

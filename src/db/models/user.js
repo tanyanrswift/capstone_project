@@ -16,8 +16,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    accessCode: {
-      type: DataTypes.INTEGER
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'student'
     }
   }, {});
   User.associate = function(models) {
