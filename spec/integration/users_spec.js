@@ -16,7 +16,7 @@ describe("routes: users", () => {
         });
     });
 
-    describe("GET /users/sign_up", () => {
+ /*   describe("GET /users/sign_up", () => {
         it("should render a view with sign up form", (done) => {
             request.get(`${base}sign_up`, (err, res, body) => {
                 expect(err).toBeNull();
@@ -24,5 +24,5 @@ describe("routes: users", () => {
                 done();
             });
         });
-    });
+    });*/
 });
