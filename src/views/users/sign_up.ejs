@@ -14,7 +14,7 @@
                     <option value="2">Sign Up As A Teacher</option>
                 </select>
             </fieldset>
-            <form action="/users" method="post">
+            <form action="/users/sign_up" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email" placeholder="Please Enter Email">
@@ -36,7 +36,7 @@
                     <input type="password" class="form-control" name="passwordConfirmation" placeholder="Please Reenter Your Password">
                 </div>
 
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-light">Submit</button>
             </form>
         </main>
             <% include ../static/partials/baseScripts.ejs %>

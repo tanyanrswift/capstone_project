@@ -10,11 +10,11 @@ module.exports = {
             passwordConfirmation: req.body.passwordConfirmation
         };
         userQueries.createUser(newUser, (err, user) => {
-            console.log("userController create User");
             if(err){
                 req.flash("error", err);
                 res.redirect("/user/sign_up");
             } else {
+                console.log(user);
                 passport.authenticate("local")(req, res, () => {
                     req.flash("notice", "You've succesfully signed in!");
                     res.redirect("/");
@@ -33,9 +33,11 @@ module.exports = {
         passport.authenticate("local")(req, res, function () {
             if(!req.user){
                 req.flash("notice", "Sign In failed. Please try again.")
+                console.log("failed sign in");
                 res.redirect("/users/sign_in");
             } else {
                 req.flash("notice", "You've successfully signed in!");
+                console.log("successful sign in");
                 res.redirect("/");
             }
         })
