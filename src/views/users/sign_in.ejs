@@ -6,6 +6,7 @@
     <body>
         <% include ../static/partials/navbar.ejs %>
         <main class="container" style="color: white;">
+            <% include ../static/partials/messages.ejs %>
             <h2>Sign In</h2>
             <form action="/users/sign_in" method="post">
                 <div class="form-group">
@@ -16,6 +17,7 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" placeholder="Enter password">
+                    <small class="text=muted" id="passwordHelp">password must match</small>
                 </div>
 
                 <button type="submit" class="btn btn-light">Submit</button>

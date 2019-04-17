@@ -32,19 +32,20 @@ module.exports = {
     signIn(req, res, next){
         passport.authenticate("local")(req, res, function () {
             if(!req.user){
-                req.flash("notice", "Sign In failed. Please try again.")
-                console.log("failed sign in");
+                req.flash("notice", "Sign in failed. Please try again.")
                 res.redirect("/users/sign_in");
             } else {
+                console.log("Sign In Successful");
+                console.log(user);
                 req.flash("notice", "You've successfully signed in!");
-                console.log("successful sign in");
                 res.redirect("/");
             }
         })
     },
     signOut(req, res, next){
         req.logout();
-        req.flash("notice", "You've successfully signed out!");
+        req.flash("notice", "You;'ve successfully signed out!");
+        console.log("Sign Out Successful")
         res.redirect("/");
     }
 }
