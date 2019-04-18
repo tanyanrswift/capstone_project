@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <% include ../static/partials/navbar.ejs %>
+        
+        <main class="container" style="color:white;">
+            <% include ../static/partials/messages.ejs %>
+
+            <h2><%= lesson.title %></h2>
+
+            <p><%= lesson.body %></p>
+            
+        </main>
+    </body>
+</html>

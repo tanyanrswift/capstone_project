@@ -6,16 +6,19 @@
   <body>
     <main class="container" style="color:white;">
         <% include ../static/partials/navbar.ejs %>
-<!-- 
-        <% if(currentUser && currentUser.role == "teacher"){ %> -->
+
+        <% include ../static/partials/messages.ejs %>
+
+        <% if(currentUser){ %>
             <a href="/lessons/new" class="btn btn-success">New Lesson</a>
-        <!-- <% } %> -->
+        <% } %>
 
         <h2>LESSONS</h2>
         <ul class="list-group">
             <% lessons.forEach((lesson) => { %>
                 <li class="list-group-item">
                     <a href="/lessons/<%= lesson.id %>"> <%= lesson.title %> </a>
+                    <a href="/lessons/<%= lesson.id %>"> <%= lesson.description %> </a>
                 </li>
            <% }) %>
         </ul>

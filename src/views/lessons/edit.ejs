@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <% include ../static/partials/navbar.ejs %>
+
+        <main class="container" style="color:white;">
+
+        <h2>Edit Lesson</h2>
+
+        <form action="/lessons/<%= lesson.id %>/update" method="post">
+            <div class="form-group">
+                <label for="title">Lesson Title</label>
+                <input value="<%= lesson.title %>" type="text" class="form-control" name="title" aria-describedby="titleHelp" placeholder="Enter Title">
+                </div>
+            <div class="form-group">
+                <label for="description">Lesson Description</label>
+                <textarea row="3" class="form-control" name="description" placeholder="Enter Description"><%= lesson.description %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="body">Lesson Body</label>
+                <textarea rows="4" class="form-control" name="body" placeholder="Enter Body"><%= lesson.body %></textarea>
+            </div>
+            <button type="submit" class="btn btn-light">Update</button>
+        </form>
+
+    </main>
+    <% include ../static/partials/baseScripts.ejs %>
+  </body>
+</html>
