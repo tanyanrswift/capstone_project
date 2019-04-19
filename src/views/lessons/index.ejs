@@ -9,15 +9,17 @@
 
         <% include ../static/partials/messages.ejs %>
 
+        <h2>LESSONS</h2>
+
         <% if(currentUser){ %>
-            <a href="/lessons/new" class="btn btn-success">New Lesson</a>
+            <a href="/lessons/new" class="btn btn-light">New Lesson</a>
         <% } %>
 
-        <h2>LESSONS</h2>
         <ul class="list-group">
             <% lessons.forEach((lesson) => { %>
                 <li class="list-group-item">
                     <a href="/lessons/<%= lesson.id %>"> <%= lesson.title %> </a>
+                    <br />
                     <a href="/lessons/<%= lesson.id %>"> <%= lesson.description %> </a>
                 </li>
            <% }) %>

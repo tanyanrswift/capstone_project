@@ -17,7 +17,7 @@ module.exports = {
                 res.redirect(500, "static/index");
             } else {
                 console.log("Index Lessons");
-                res.render("lessons/index");
+                res.render("lessons/index", {lessons}); //we need to pass in lessons here so that it is defined as a variable in our view
             }
         })
     },
@@ -58,6 +58,7 @@ module.exports = {
             if(err){
                 res.redirect(500, `/lessons/${req.params.id}`)
             } else {
+                console.log("successful lesson destroy");
                 res.redirect(303, "/lessons")
             }
         });
