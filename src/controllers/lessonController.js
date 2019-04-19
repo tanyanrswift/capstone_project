@@ -11,8 +11,7 @@ module.exports = {
             //role: req.user.role,
             //id: req.user.id
         }
-        lessonQueries.getAllLessons({
-            [Op.or]: { userId : currentUser.id }}, (err, lessons) => {
+        lessonQueries.getAllLessons(req, (err, lessons) => {
             if(err){
                 console.log(err);
                 res.redirect(500, "static/index");
