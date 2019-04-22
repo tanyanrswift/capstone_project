@@ -13,7 +13,7 @@
 
             <p><%= lesson.body %></p>
             
-            <% if (currentUser && currentUser.role === 2) { %>
+            <% if (currentUser && currentUser.role === '2') { %>
                 <a href="/lessons/<%= lesson.id %>/edit" class="btn btn-light">Edit</a>
                 <form style="display:inital" action="/lessons/<%= lesson.id %>/destroy" method="post">
                     <button type="submit" class="btn btn-light">Delete</button>

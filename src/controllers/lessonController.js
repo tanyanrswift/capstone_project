@@ -13,8 +13,9 @@ module.exports = {
             role: req.user.role,
             id: req.user.id
         }
-        if((currentUser.role == 'teacher')){
+        if(currentUser && (currentUser.role == 2)){
             console.log('teacher role')
+            console.log(currentUser)
             lessonQueries.getAllLessons(req, (err, lessons) => {
                 if(err){
                     console.log(err);
@@ -24,7 +25,7 @@ module.exports = {
                     res.render("lessons/index", {lessons}); //we need to pass in lessons here so that it is defined as a variable in our view
                 }
             })
-        } else if ((currentUser.role == 'student')){
+        } else if (currentUser && (currentUser.role == 1)){
             console.log('student role')
             lessonQueries.getAllLessons(req, (err, lessons) => {
                 if(err){
