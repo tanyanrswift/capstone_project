@@ -13,10 +13,13 @@
 
             <p><%= lesson.body %></p>
             
-            <a href="/lessons/<%= lesson.id %>/edit" class="btn btn-light">Edit</a>
-            <form style="display:inital" action="/lessons/<%= lesson.id %>/destroy" method="post">
-                <button type="submit" class="btn btn-light">Delete</button>
-            </form>
+            <% if (currentUser && currentUser.role === "teacher") { %>
+                <a href="/lessons/<%= lesson.id %>/edit" class="btn btn-light">Edit</a>
+                <form style="display:inital" action="/lessons/<%= lesson.id %>/destroy" method="post">
+                    <button type="submit" class="btn btn-light">Delete</button>
+                </form>
+            <% } %>
+
         </main>
     </body>
 </html>

@@ -11,7 +11,7 @@
 
         <h2>LESSONS</h2>
 
-        <% if(currentUser){ %>
+        <% if(currentUser && (currentUser.role === "teacher")){ %>
             <a href="/lessons/new" class="btn btn-light">New Lesson</a>
         <% } %>
 

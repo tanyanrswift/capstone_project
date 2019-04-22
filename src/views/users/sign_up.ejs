@@ -10,11 +10,13 @@
             <h2>Sign Up</h2>
             <fieldset>
                 <label>Please Select An Option To Sign Up:</label>
+                <br />
                 <select>
-                    <option value="1">Sign Up As A Student</option>
-                    <option value="2">Sign Up As A Teacher</option>
+                    <option value="1" name="role">Sign Up As A Student</option>
+                    <option value="2" name="role">Sign Up As A Teacher</option>
                 </select>
             </fieldset>
+            <br />
             <form action="/users/sign_up" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
