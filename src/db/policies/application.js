@@ -6,11 +6,11 @@ module.exports = class ApplicationPolicy {
     }
 
     _isStudent() {
-        return this.user && this.user.role == "student";
+        return this.user && this.user.role == 1;
     }
 
     _isTeacher() {
-        return this.user && this.user.role == "teacher";
+        return this.user && this.user.role == 2;
     }
 
     new() {

@@ -25,7 +25,7 @@
     "dialect": "postgres",
     "logging": false,
     "operatorsAliases": false,
-    "use_env_variable": "https://tanyanrswift-music-theory-app.herokuapp.com/",
+    "use_env_variable": "DATABASE_URL",
     "db": "https://tanyanrswift-music-theory-app.herokuapp.com/"
   }
 }
