@@ -51,7 +51,7 @@ module.exports = {
     },
     new(req, res, next) {
         const authorized = new Authorizer(req.user).new();
-        if(authorized && (currentUser.role == 'teacher')){
+        if(authorized) {
             res.render("lessons/new");
         } else {
             req.flash("You are not authorized to do that!");
